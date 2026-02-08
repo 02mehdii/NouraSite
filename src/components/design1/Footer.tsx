@@ -2,16 +2,20 @@
 
 import { motion } from 'framer-motion';
 import { Apple, Moon, Heart } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Footer() {
+    const t = useTranslations('footer');
+    const locale = useLocale();
+
     return (
         <footer id="download" className="relative py-24 bg-gradient-to-b from-[#FDFBF7] to-[#F0EBE0] overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0">
-                <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-10"
+                <div className="absolute bottom-0 start-0 w-96 h-96 rounded-full opacity-10"
                     style={{ background: 'radial-gradient(circle, #D4AF37 0%, transparent 70%)' }}
                 />
-                <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10"
+                <div className="absolute top-0 end-0 w-64 h-64 rounded-full opacity-10"
                     style={{ background: 'radial-gradient(circle, #1A3C34 0%, transparent 70%)' }}
                 />
             </div>
@@ -27,7 +31,7 @@ export default function Footer() {
                 >
                     <Moon className="w-5 h-5 text-[#D4AF37]" />
                     <span className="text-[#1A3C34]" style={{ fontFamily: 'var(--font-outfit)' }}>
-                        Ramadan 2026 starts in <span className="font-semibold text-[#D4AF37]">~24 days</span>
+                        {t('ramadanCountdown')} <span className="font-semibold text-[#D4AF37]">{t('ramadanDays')}</span>
                     </span>
                 </motion.div>
 
@@ -40,7 +44,7 @@ export default function Footer() {
                     className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#1A3C34] mb-6"
                     style={{ fontFamily: 'var(--font-cormorant)' }}
                 >
-                    Are you ready to <span className="text-gradient-gold">focus?</span>
+                    {t('ctaTitle')} <span className="text-gradient-gold">{t('ctaTitleHighlight')}</span>
                 </motion.h2>
 
                 <motion.p
@@ -51,7 +55,7 @@ export default function Footer() {
                     className="text-xl text-[#4A5D58] mb-10 max-w-xl mx-auto"
                     style={{ fontFamily: 'var(--font-outfit)', fontWeight: 300 }}
                 >
-                    Start your digital detox journey today. Your heart will thank you.
+                    {t('ctaSubtitle')}
                 </motion.p>
 
                 {/* CTA Button */}
@@ -68,12 +72,12 @@ export default function Footer() {
                     >
                         <Apple className="w-7 h-7" />
                         <span style={{ fontFamily: 'var(--font-outfit)' }} className="font-medium text-lg">
-                            Download for iOS — Free
+                            {t('ctaButton')}
                         </span>
                     </motion.button>
 
                     <p className="mt-4 text-sm text-[#4A5D58]" style={{ fontFamily: 'var(--font-outfit)' }}>
-                        Available on the App Store • No subscription required to start
+                        {t('ctaNote')}
                     </p>
                 </motion.div>
 
@@ -86,20 +90,20 @@ export default function Footer() {
                     className="mt-20 pt-8 border-t border-[#1A3C34]/10"
                 >
                     <div className="flex flex-wrap justify-center gap-8 mb-8">
-                        <a href="/privacy" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>Privacy Policy</a>
-                        <a href="/terms" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>Terms of Service</a>
-                        <a href="mailto:getnouraapp@gmail.com" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>Support</a>
-                        <a href="mailto:getnouraapp@gmail.com" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>Contact</a>
+                        <a href={`/${locale}/privacy`} className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('privacyPolicy')}</a>
+                        <a href={`/${locale}/terms`} className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('termsOfService')}</a>
+                        <a href="mailto:getnouraapp@gmail.com" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('support')}</a>
+                        <a href="mailto:getnouraapp@gmail.com" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('contact')}</a>
                     </div>
 
                     <div className="flex items-center justify-center gap-2 text-[#4A5D58]" style={{ fontFamily: 'var(--font-outfit)' }}>
-                        <span>Made with</span>
+                        <span>{t('madeWith')}</span>
                         <Heart className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
-                        <span>for the Ummah</span>
+                        <span>{t('forUmmah')}</span>
                     </div>
 
                     <p className="mt-4 text-sm text-[#4A5D58]/60" style={{ fontFamily: 'var(--font-outfit)' }}>
-                        © 2026 Noura. All rights reserved.
+                        {t('copyright')}
                     </p>
                 </motion.div>
             </div>

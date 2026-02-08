@@ -2,32 +2,35 @@
 
 import { motion } from 'framer-motion';
 import { Quote, Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-const testimonials = [
+interface Testimonial {
+    translationKey: string;
+    rating: number;
+    avatar: string;
+}
+
+const testimonials: Testimonial[] = [
     {
-        name: 'Ahmed K.',
-        role: 'Software Engineer',
-        quote: 'Noura changed my relationship with my phone. Now every time I mindlessly reach for Instagram, I\'m reminded of Allah instead. SubhanAllah.',
+        translationKey: 'testimonial1',
         rating: 5,
         avatar: '👨‍💻',
     },
     {
-        name: 'Fatima S.',
-        role: 'Medical Student',
-        quote: 'I reclaimed 3+ hours daily for studying and Quran. My exam scores improved and my heart feels lighter. This app is a true blessing.',
+        translationKey: 'testimonial2',
         rating: 5,
         avatar: '👩‍⚕️',
     },
     {
-        name: 'Omar M.',
-        role: 'Business Owner',
-        quote: 'The Dua-to-unlock feature is genius. I\'ve memorized more duas in 2 weeks than I did in 2 years. Highly recommend for every Muslim.',
+        translationKey: 'testimonial3',
         rating: 5,
         avatar: '👨‍💼',
     },
 ];
 
 export default function Testimonials() {
+    const t = useTranslations('testimonials');
+
     return (
         <section className="relative py-24 bg-[#FDFBF7]">
             <div className="max-w-6xl mx-auto px-6">
@@ -43,19 +46,19 @@ export default function Testimonials() {
                         className="text-[#D4AF37] text-sm uppercase tracking-widest"
                         style={{ fontFamily: 'var(--font-outfit)' }}
                     >
-                        Testimonials
+                        {t('label')}
                     </span>
                     <h2
                         className="text-4xl md:text-5xl font-medium text-[#1A3C34] mt-4"
                         style={{ fontFamily: 'var(--font-cormorant)' }}
                     >
-                        Join the <span className="text-gradient-gold">Digital Detox</span> Movement
+                        {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span> {t('titleEnd')}
                     </h2>
                     <p
                         className="text-lg text-[#4A5D58] max-w-2xl mx-auto mt-4"
                         style={{ fontFamily: 'var(--font-outfit)', fontWeight: 300 }}
                     >
-                        10,000+ Muslims are reclaiming their time and reconnecting with their Deen.
+                        {t('subtitle')}
                     </p>
                 </motion.div>
 
@@ -63,7 +66,7 @@ export default function Testimonials() {
                 <div className="grid md:grid-cols-3 gap-8">
                     {testimonials.map((testimonial, index) => (
                         <motion.div
-                            key={testimonial.name}
+                            key={testimonial.translationKey}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -71,7 +74,7 @@ export default function Testimonials() {
                             className="relative p-8 rounded-3xl bg-white border border-[#1A3C34]/10 shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
                             {/* Quote icon */}
-                            <div className="absolute -top-4 right-8">
+                            <div className="absolute -top-4 end-8">
                                 <div className="w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center">
                                     <Quote className="w-5 h-5 text-white" />
                                 </div>
@@ -89,7 +92,7 @@ export default function Testimonials() {
                                 className="text-[#4A5D58] leading-relaxed mb-6 italic"
                                 style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem' }}
                             >
-                                "{testimonial.quote}"
+                                &quot;{t(`${testimonial.translationKey}.quote`)}&quot;
                             </p>
 
                             {/* Author */}
@@ -102,13 +105,13 @@ export default function Testimonials() {
                                         className="font-medium text-[#1A3C34]"
                                         style={{ fontFamily: 'var(--font-outfit)' }}
                                     >
-                                        {testimonial.name}
+                                        {t(`${testimonial.translationKey}.name`)}
                                     </p>
                                     <p
                                         className="text-sm text-[#4A5D58]"
                                         style={{ fontFamily: 'var(--font-outfit)' }}
                                     >
-                                        {testimonial.role}
+                                        {t(`${testimonial.translationKey}.role`)}
                                     </p>
                                 </div>
                             </div>
@@ -127,19 +130,19 @@ export default function Testimonials() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div>
                             <p className="text-3xl md:text-4xl font-bold text-[#D4AF37]" style={{ fontFamily: 'var(--font-outfit)' }}>10K+</p>
-                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>Active Users</p>
+                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>{t('stats.activeUsers')}</p>
                         </div>
                         <div>
                             <p className="text-3xl md:text-4xl font-bold text-[#D4AF37]" style={{ fontFamily: 'var(--font-outfit)' }}>2.5M+</p>
-                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>Duas Read</p>
+                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>{t('stats.duasRead')}</p>
                         </div>
                         <div>
                             <p className="text-3xl md:text-4xl font-bold text-[#D4AF37]" style={{ fontFamily: 'var(--font-outfit)' }}>500K+</p>
-                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>Hours Reclaimed</p>
+                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>{t('stats.hoursReclaimed')}</p>
                         </div>
                         <div>
                             <p className="text-3xl md:text-4xl font-bold text-[#D4AF37]" style={{ fontFamily: 'var(--font-outfit)' }}>4.9★</p>
-                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>App Store Rating</p>
+                            <p className="text-white/70 text-sm mt-1" style={{ fontFamily: 'var(--font-outfit)' }}>{t('stats.appStoreRating')}</p>
                         </div>
                     </div>
                 </motion.div>

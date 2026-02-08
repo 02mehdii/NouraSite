@@ -3,8 +3,12 @@
 import { motion } from 'framer-motion';
 import { Apple, Sparkles } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import LanguageSelector from '../LanguageSelector';
 
 export default function Hero() {
+    const t = useTranslations();
+
     return (
         <section className="relative min-h-screen overflow-hidden bg-[#FDFBF7]">
             {/* Watercolor texture overlay */}
@@ -58,9 +62,15 @@ export default function Hero() {
                     </div>
 
                     <div className="hidden md:flex items-center gap-8">
-                        <a href="#features" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>Features</a>
-                        <a href="#how-it-works" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>How It Works</a>
-                        <a href="#download" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>Download</a>
+                        <a href="#features" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('nav.features')}</a>
+                        <a href="#how-it-works" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('nav.howItWorks')}</a>
+                        <a href="#download" className="text-[#4A5D58] hover:text-[#1A3C34] transition-colors" style={{ fontFamily: 'var(--font-outfit)' }}>{t('nav.download')}</a>
+                        <LanguageSelector />
+                    </div>
+
+                    {/* Mobile language selector */}
+                    <div className="md:hidden">
+                        <LanguageSelector />
                     </div>
                 </motion.nav>
 
@@ -81,7 +91,7 @@ export default function Hero() {
                         >
                             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
                             <span className="text-sm text-[#1A3C34]" style={{ fontFamily: 'var(--font-outfit)' }}>
-                                Ramadan 2026 Ready
+                                {t('hero.badge')}
                             </span>
                         </motion.div>
 
@@ -90,9 +100,9 @@ export default function Hero() {
                             className="text-5xl md:text-6xl lg:text-7xl font-medium text-[#1A3C34] leading-tight mb-6"
                             style={{ fontFamily: 'var(--font-cormorant)' }}
                         >
-                            Quit the Scroll.
+                            {t('hero.headline1')}
                             <br />
-                            <span className="text-gradient-gold">Connect to the Soul.</span>
+                            <span className="text-gradient-gold">{t('hero.headline2')}</span>
                         </h1>
 
                         {/* Subheadline */}
@@ -100,8 +110,8 @@ export default function Hero() {
                             className="text-xl text-[#4A5D58] mb-10 max-w-lg leading-relaxed"
                             style={{ fontFamily: 'var(--font-outfit)', fontWeight: 300 }}
                         >
-                            The first Islamic focus app that forces you to read Duas to unlock social media.
-                            <span className="text-[#1A3C34] font-medium"> Reclaim your heart before Ramadan.</span>
+                            {t('hero.subheadline')}
+                            <span className="text-[#1A3C34] font-medium"> {t('hero.subheadlineBold')}</span>
                         </p>
 
                         {/* CTA Button */}
@@ -112,7 +122,7 @@ export default function Hero() {
                         >
                             <Apple className="w-6 h-6" />
                             <span style={{ fontFamily: 'var(--font-outfit)' }} className="font-medium">
-                                Download for iOS
+                                {t('hero.ctaButton')}
                             </span>
                             <motion.span
                                 className="text-[#D4AF37]"
@@ -131,13 +141,13 @@ export default function Hero() {
                                         <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-[#1A3C34] to-[#2D5A4E] border-2 border-[#FDFBF7]" />
                                     ))}
                                 </div>
-                                <span>1k+ Muslims</span>
+                                <span>{t('hero.trustUsers')}</span>
                             </div>
                             <div className="flex items-center gap-1">
                                 {[1, 2, 3, 4, 5].map((i) => (
                                     <span key={i} className="text-[#D4AF37]">★</span>
                                 ))}
-                                <span className="ml-1">4.9 on App Store</span>
+                                <span className="ms-1">{t('hero.trustRating')}</span>
                             </div>
                         </div>
                     </motion.div>
@@ -185,7 +195,7 @@ export default function Hero() {
                             transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
                         >
                             <p className="text-sm text-[#1A3C34]" style={{ fontFamily: 'var(--font-outfit)' }}>
-                                <span className="text-[#D4AF37] font-semibold">+2.5h</span> reclaimed today
+                                <span className="text-[#D4AF37] font-semibold">+2.5h</span> {t('hero.reclaimed')}
                             </p>
                         </motion.div>
                     </motion.div>

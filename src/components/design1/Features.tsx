@@ -1,38 +1,43 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { LayoutGrid, BookOpen, Clock, Library } from 'lucide-react';
+import { LayoutGrid, BookOpen, Clock, Library, LucideIcon } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-const features = [
+interface Feature {
+    id: string;
+    translationKey: string;
+    icon: LucideIcon;
+    image: string;
+    color: string;
+}
+
+const features: Feature[] = [
     {
         id: 'widgets',
-        title: 'Beautiful Widgets',
-        description: 'Prayer times, dhikr reminders, and your spiritual stats right on your home screen. Stay connected to your deen at a glance.',
+        translationKey: 'widgets',
         icon: LayoutGrid,
         image: '/screenshots/widgetsnoura.png',
         color: '#D4AF37',
     },
     {
         id: 'quran',
-        title: 'Quran',
-        description: 'Beautiful Arabic script with word-by-word translations. Listen to nearly 100 world-renowned reciters including top imams.',
+        translationKey: 'quran',
         icon: BookOpen,
         image: '/screenshots/quranreadernoura.png',
         color: '#1A3C34',
     },
     {
         id: 'prayer',
-        title: 'Prayer Times',
-        description: 'Accurate prayer times with beautiful Athan notifications. Never miss a salah with customizable reminders.',
+        translationKey: 'prayer',
         icon: Clock,
         image: '/screenshots/prayertimes.png',
         color: '#2D5A4E',
     },
     {
         id: 'library',
-        title: 'Islamic Library',
-        description: 'Access a curated collection of duas, supplications, and daily remembrances. Your spiritual companion in your pocket.',
+        translationKey: 'library',
         icon: Library,
         image: '/screenshots/library.png',
         color: '#4A5D58',
@@ -40,6 +45,8 @@ const features = [
 ];
 
 export default function Features() {
+    const t = useTranslations('features');
+
     return (
         <section id="features" className="relative py-24 bg-gradient-to-b from-[#F5F0E8] to-[#FDFBF7]">
             <div className="max-w-7xl mx-auto px-6">
@@ -55,19 +62,19 @@ export default function Features() {
                         className="text-[#D4AF37] text-sm uppercase tracking-widest"
                         style={{ fontFamily: 'var(--font-outfit)' }}
                     >
-                        Features
+                        {t('label')}
                     </span>
                     <h2
                         className="text-4xl md:text-5xl font-medium text-[#1A3C34] mt-4"
                         style={{ fontFamily: 'var(--font-cormorant)' }}
                     >
-                        Everything for your <span className="text-gradient-gold">spiritual journey</span>
+                        {t('title')} <span className="text-gradient-gold">{t('titleHighlight')}</span>
                     </h2>
                     <p
                         className="text-lg text-[#4A5D58] mt-4 max-w-2xl mx-auto"
                         style={{ fontFamily: 'var(--font-outfit)', fontWeight: 300 }}
                     >
-                        Noura brings together all the tools you need to strengthen your connection with Allah.
+                        {t('subtitle')}
                     </p>
                 </motion.div>
 
@@ -95,13 +102,13 @@ export default function Features() {
                                         className="text-2xl md:text-3xl font-medium text-[#1A3C34] mb-3"
                                         style={{ fontFamily: 'var(--font-cormorant)' }}
                                     >
-                                        {feature.title}
+                                        {t(`${feature.translationKey}.title`)}
                                     </h3>
                                     <p
                                         className="text-[#4A5D58] leading-relaxed"
                                         style={{ fontFamily: 'var(--font-outfit)', fontWeight: 300 }}
                                     >
-                                        {feature.description}
+                                        {t(`${feature.translationKey}.description`)}
                                     </p>
                                 </div>
 
@@ -116,7 +123,7 @@ export default function Features() {
                                             <div className="relative w-[180px] lg:w-[160px] rounded-[28px] overflow-hidden shadow-xl group-hover:shadow-2xl transition-shadow duration-500">
                                                 <Image
                                                     src={feature.image}
-                                                    alt={feature.title}
+                                                    alt={t(`${feature.translationKey}.title`)}
                                                     width={160}
                                                     height={347}
                                                     className="w-full h-auto"
@@ -151,7 +158,7 @@ export default function Features() {
                         className="text-[#4A5D58] text-lg"
                         style={{ fontFamily: 'var(--font-outfit)', fontWeight: 300 }}
                     >
-                        And so much more — <span className="text-[#1A3C34] font-medium">Ramadan Mode</span>, <span className="text-[#1A3C34] font-medium">Streak Tracking</span>, <span className="text-[#1A3C34] font-medium">Good Deeds Counter</span>...
+                        {t('more')} <span className="text-[#1A3C34] font-medium">{t('ramadanMode')}</span>, <span className="text-[#1A3C34] font-medium">{t('streakTracking')}</span>, <span className="text-[#1A3C34] font-medium">{t('goodDeedsCounter')}</span>...
                     </p>
                 </motion.div>
             </div>

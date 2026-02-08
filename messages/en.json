@@ -1,0 +1,178 @@
+{
+    "nav": {
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "download": "Download"
+    },
+    "hero": {
+        "badge": "Ramadan 2026 Ready",
+        "headline1": "Quit the Scroll.",
+        "headline2": "Connect to the Soul.",
+        "subheadline": "The first Islamic focus app that forces you to read Duas to unlock social media.",
+        "subheadlineBold": "Reclaim your heart before Ramadan.",
+        "ctaButton": "Download for iOS",
+        "trustUsers": "1k+ Muslims",
+        "trustRating": "4.9 on App Store",
+        "reclaimed": "reclaimed today"
+    },
+    "features": {
+        "label": "Features",
+        "title": "Everything for your",
+        "titleHighlight": "spiritual journey",
+        "subtitle": "Noura brings together all the tools you need to strengthen your connection with Allah.",
+        "widgets": {
+            "title": "Beautiful Widgets",
+            "description": "Prayer times, dhikr reminders, and your spiritual stats right on your home screen. Stay connected to your deen at a glance."
+        },
+        "quran": {
+            "title": "Quran",
+            "description": "Beautiful Arabic script with word-by-word translations. Listen to nearly 100 world-renowned reciters including top imams."
+        },
+        "prayer": {
+            "title": "Prayer Times",
+            "description": "Accurate prayer times with beautiful Athan notifications. Never miss a salah with customizable reminders."
+        },
+        "library": {
+            "title": "Islamic Library",
+            "description": "Access a curated collection of duas, supplications, and daily remembrances. Your spiritual companion in your pocket."
+        },
+        "more": "And so much more —",
+        "ramadanMode": "Ramadan Mode",
+        "streakTracking": "Streak Tracking",
+        "goodDeedsCounter": "Good Deeds Counter"
+    },
+    "howItWorks": {
+        "label": "How It Works",
+        "title": "Your path to digital",
+        "titleHighlight": "Ihsan",
+        "step1": {
+            "number": "01",
+            "title": "Shield",
+            "description": "Block distracting apps when you need focus. TikTok, Instagram, Twitter—choose your battles."
+        },
+        "step2": {
+            "number": "02",
+            "title": "Key",
+            "description": "Try to open them? You must first read a beautiful Dua. A spiritual toll for your soul."
+        },
+        "step3": {
+            "number": "03",
+            "title": "Reward",
+            "description": "Unlock your app with a reminded heart. Every bypass becomes a moment of remembrance."
+        },
+        "exampleDua": "Example Dua",
+        "duaArabic": "رَبِّ اغْفِرْ لِي",
+        "duaTranslation": "\"My Lord, forgive me.\"",
+        "duaContext": "— Read before unlocking TikTok"
+    },
+    "problem": {
+        "title": "Your phone is stealing your",
+        "titleHighlight": "Akhirah.",
+        "subtitle": "Every hour spent doomscrolling is an hour lost from remembering Allah. Which one brings you peace?",
+        "before": {
+            "badge": "Before Noura",
+            "screenTime": "Daily screen time",
+            "screenTimeValue": "5h 23m",
+            "duasRead": "Duas read",
+            "duasReadValue": "0",
+            "quote": "\"I feel empty... where did my day go?\""
+        },
+        "after": {
+            "badge": "With Noura",
+            "timeReclaimed": "Time reclaimed",
+            "timeReclaimedValue": "3h 45m",
+            "duasRead": "Duas read",
+            "duasReadValue": "47",
+            "quote": "\"My heart feels at peace. Alhamdulillah.\""
+        }
+    },
+    "testimonials": {
+        "label": "Testimonials",
+        "title": "Join the",
+        "titleHighlight": "Digital Detox",
+        "titleEnd": "Movement",
+        "subtitle": "10,000+ Muslims are reclaiming their time and reconnecting with their Deen.",
+        "testimonial1": {
+            "name": "Ahmed K.",
+            "role": "Software Engineer",
+            "quote": "Noura changed my relationship with my phone. Now every time I mindlessly reach for Instagram, I'm reminded of Allah instead. SubhanAllah."
+        },
+        "testimonial2": {
+            "name": "Fatima S.",
+            "role": "Medical Student",
+            "quote": "I reclaimed 3+ hours daily for studying and Quran. My exam scores improved and my heart feels lighter. This app is a true blessing."
+        },
+        "testimonial3": {
+            "name": "Omar M.",
+            "role": "Business Owner",
+            "quote": "The Dua-to-unlock feature is genius. I've memorized more duas in 2 weeks than I did in 2 years. Highly recommend for every Muslim."
+        },
+        "stats": {
+            "activeUsers": "Active Users",
+            "duasRead": "Duas Read",
+            "hoursReclaimed": "Hours Reclaimed",
+            "appStoreRating": "App Store Rating"
+        }
+    },
+    "footer": {
+        "ramadanCountdown": "Ramadan 2026 starts in",
+        "ramadanDays": "~24 days",
+        "ctaTitle": "Are you ready to",
+        "ctaTitleHighlight": "focus?",
+        "ctaSubtitle": "Start your digital detox journey today. Your heart will thank you.",
+        "ctaButton": "Download for iOS — Free",
+        "ctaNote": "Available on the App Store • No subscription required to start",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "support": "Support",
+        "contact": "Contact",
+        "madeWith": "Made with",
+        "forUmmah": "for the Ummah",
+        "copyright": "© 2026 Noura. All rights reserved."
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last Updated: February 8, 2026",
+        "intro": "At Noura, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.",
+        "section1Title": "Information We Collect",
+        "section1Content": "We collect information you provide directly to us, such as when you create an account, configure app settings, or contact us for support. This may include your email address and app preferences.",
+        "section2Title": "How We Use Your Information",
+        "section2Content": "We use the information we collect to provide, maintain, and improve our services, including to deliver personalized prayer times, track your spiritual progress, and send you notifications you have opted into.",
+        "section3Title": "Data Storage",
+        "section3Content": "Your personal data is stored securely and we implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction.",
+        "section4Title": "Third-Party Services",
+        "section4Content": "We may use third-party services for analytics and crash reporting. These services collect anonymized data to help us improve the app experience.",
+        "section5Title": "Your Rights",
+        "section5Content": "You have the right to access, correct, or delete your personal information at any time. You can do this through the app settings or by contacting us directly.",
+        "section6Title": "Changes to This Policy",
+        "section6Content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last Updated' date.",
+        "section7Title": "Contact Us",
+        "section7Content": "If you have any questions about this Privacy Policy, please contact us at getnouraapp@gmail.com."
+    },
+    "terms": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last Updated: February 8, 2026",
+        "intro": "Welcome to Noura. By downloading or using our app, you agree to be bound by these Terms of Service.",
+        "section1Title": "Acceptance of Terms",
+        "section1Content": "By accessing or using Noura, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.",
+        "section2Title": "Use of the App",
+        "section2Content": "Noura is designed to help you manage your screen time and strengthen your spiritual connection. You agree to use the app only for its intended purposes and in compliance with all applicable laws.",
+        "section3Title": "User Accounts",
+        "section3Content": "You are responsible for safeguarding your account credentials and for any activity that occurs under your account. You must notify us immediately of any unauthorized use.",
+        "section4Title": "Subscriptions and Payments",
+        "section4Content": "Some features of Noura require a subscription. Payment will be charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.",
+        "section5Title": "Intellectual Property",
+        "section5Content": "The app and its original content, features, and functionality are owned by Noura and are protected by international copyright, trademark, and other intellectual property laws.",
+        "section6Title": "Limitation of Liability",
+        "section6Content": "Noura shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.",
+        "section7Title": "Changes to Terms",
+        "section7Content": "We reserve the right to modify or replace these Terms at any time. We will provide notice of any changes by updating the 'Last Updated' date.",
+        "section8Title": "Contact Us",
+        "section8Content": "If you have any questions about these Terms, please contact us at getnouraapp@gmail.com."
+    },
+    "language": {
+        "en": "EN",
+        "ar": "AR",
+        "fr": "FR"
+    }
+}
