@@ -15,8 +15,8 @@ const features = [
     },
     {
         id: 'quran',
-        title: 'Duas & Hadith',
-        description: 'Beautiful Arabic script with translations. Morning and evening remembrances to start and end your day with peace.',
+        title: 'Quran',
+        description: 'Beautiful Arabic script with word-by-word translations. Listen to nearly 100 world-renowned reciters including top imams.',
         icon: BookOpen,
         image: '/screenshots/quranreadernoura.png',
         color: '#1A3C34',

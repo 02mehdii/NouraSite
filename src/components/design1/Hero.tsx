@@ -42,9 +42,13 @@ export default function Hero() {
                     className="flex items-center justify-between mb-20"
                 >
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1A3C34] to-[#2D5A4E] flex items-center justify-center">
-                            <span className="text-[#D4AF37] text-lg" style={{ fontFamily: 'var(--font-cormorant)' }}>ن</span>
-                        </div>
+                        <Image
+                            src="/screenshots/nouralogo.png"
+                            alt="Noura Logo"
+                            width={40}
+                            height={40}
+                            className="rounded-full"
+                        />
                         <span
                             className="text-2xl font-semibold text-[#1A3C34]"
                             style={{ fontFamily: 'var(--font-cormorant)' }}
@@ -127,7 +131,7 @@ export default function Hero() {
                                         <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-[#1A3C34] to-[#2D5A4E] border-2 border-[#FDFBF7]" />
                                     ))}
                                 </div>
-                                <span>10,000+ Muslims</span>
+                                <span>1k+ Muslims</span>
                             </div>
                             <div className="flex items-center gap-1">
                                 {[1, 2, 3, 4, 5].map((i) => (
