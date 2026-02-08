@@ -1,0 +1,11 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_global-error/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__f5376375._.js")
+R.c("server/chunks/ssr/NouraLanding_44dc3456._.js")
+R.c("server/chunks/ssr/76db5_next_dist_7f0fc1c9._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__15cc6fa7._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__2be9c318._.js")
+R.c("server/chunks/ssr/76db5_next_dist_68880ba6._.js")
+R.c("server/chunks/ssr/NouraLanding_src_app_7e14f85b._.js")
+R.c("server/chunks/ssr/NouraLanding__next-internal_server_app__global-error_page_actions_c4ff1a54.js")
+R.m(35429)
+module.exports=R.m(35429).exports
